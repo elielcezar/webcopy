@@ -34,6 +34,11 @@ env/
 
 # Output directory - sites baixados
 output/
+*.zip
+
+# Flask
+instance/
+.webassets-cache
 
 # OS
 .DS_Store

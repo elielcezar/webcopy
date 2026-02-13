@@ -53,6 +53,24 @@ pip install -e .
 
 ## 🚀 Uso
 
+### Interface Web (Recomendado) 🌐
+
+A forma mais fácil de usar o WebCopy é através da interface web:
+
+```bash
+# Inicie o servidor web
+python run_web.py
+
+# Acesse no navegador
+# http://localhost:5000
+```
+
+Depois é só inserir a URL, acompanhar o progresso e baixar o resultado!
+
+📖 **[Documentação completa da Interface Web](WEB_INTERFACE.md)**
+
+### Linha de Comando (CLI)
+
 ```bash
 # Uso básico - baixa a página e cria diretório com timestamp
 webcopy https://example.com
@@ -114,6 +132,14 @@ output/
 
 ## ✨ Recursos
 
+### Interface & Usabilidade
+- ✅ **Interface Web moderna e amigável** (Flask + HTML/CSS/JS)
+- ✅ **Progresso em tempo real** com status detalhado
+- ✅ **Download em ZIP** do site completo
+- ✅ **Preview no navegador** antes de baixar
+- ✅ Interface CLI completa (click)
+
+### Funcionalidades Core
 - ✅ Download de HTML e todos os assets referenciados
 - ✅ Organização automática por tipo de arquivo (CSS, JS, images, fonts, assets)
 - ✅ Reescrita inteligente de URLs para funcionamento local
@@ -235,18 +261,30 @@ python -m http.server 8000
 - **lxml** (>=5.0.0) - Parser XML/HTML performático
 - **click** (>=8.1.0) - Interface CLI amigável
 - **brotli** (>=1.0.0) - Suporte a compressão Brotli (essencial!)
+- **flask** (>=3.0.0) - Interface web
+- **flask-cors** (>=4.0.0) - CORS para desenvolvimento web
 
 ## 🔮 Melhorias Futuras
+
+### ✅ Recentemente Implementadas
+- ✅ Interface web com Flask (Janeiro 2026)
+- ✅ Progresso em tempo real via polling
+- ✅ Download em ZIP
+- ✅ Preview no navegador
 
 ### Não Implementadas (Escopo Básico)
 - [ ] Crawling de múltiplas páginas
 - [ ] Download paralelo (threading/async)
 - [ ] Minificação de assets
-- [ ] Compressão de saída (ZIP)
 - [ ] Suporte para SPAs (Selenium/Playwright)
-- [ ] Interface gráfica (GUI)
-- [ ] Histórico de downloads
 - [ ] Versionamento de sites
+
+### Melhorias na Interface Web
+- [ ] WebSockets para progresso (substituir polling)
+- [ ] Persistência de jobs em banco de dados
+- [ ] Histórico de downloads
+- [ ] Autenticação de usuários
+- [ ] Cancelamento de jobs em andamento
 
 ### Implementações Possíveis
 - [ ] Modo verboso com mais detalhes de debug

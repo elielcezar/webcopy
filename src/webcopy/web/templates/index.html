@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCopy - Copie Sites para Uso Offline</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1><i class="fas fa-copy"></i> WebCopy</h1>
+                <p>Copie páginas web completas para uso offline</p>
+            </div>
+
+            <!-- Form Section -->
+            <div id="form-section" class="form-section">
+                <div class="input-group">
+                    <label for="url-input">
+                        <i class="fas fa-link"></i> URL da Página
+                    </label>
+                    <input 
+                        type="url" 
+                        id="url-input" 
+                        placeholder="https://example.com"
+                        autocomplete="off"
+                    >
+                </div>
+                <button id="submit-btn" class="btn btn-primary">
+                    <i class="fas fa-copy"></i> Copiar Site
+                </button>
+                
+                <div id="error-message" class="error-message">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span id="error-text">Erro</span>
+                </div>
+            </div>
+
+            <!-- Progress Section -->
+            <div id="progress-section" class="progress-section">
+                <div class="progress-icon">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <h2>Processando...</h2>
+                <div class="progress-bar-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+                <p id="progress-status" class="progress-status">Iniciando download...</p>
+                <div id="progress-details" class="progress-details">
+                    <!-- Steps will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Result Section -->
+            <div id="result-section" class="result-section">
+                <div class="result-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Cópia Concluída!</h2>
+                
+                <div class="result-info">
+                    <div class="result-info-row">
+                        <span class="result-info-label">
+                            <i class="fas fa-globe"></i> URL
+                        </span>
+                        <span id="result-url" class="result-info-value">-</span>
+                    </div>
+                    <div class="result-info-row">
+                        <span class="result-info-label">
+                            <i class="fas fa-folder"></i> Caminho
+                        </span>
+                        <span id="result-path" class="result-info-value">-</span>
+                    </div>
+                </div>
+
+                <div class="result-actions">
+                    <button id="download-btn" class="btn btn-success">
+                        <i class="fas fa-download"></i> Download ZIP
+                    </button>
+                    <button id="preview-btn" class="btn btn-info">
+                        <i class="fas fa-eye"></i> Visualizar
+                    </button>
+                </div>
+                
+                <button id="new-copy-btn" class="btn btn-secondary" style="margin-top: 15px;">
+                    <i class="fas fa-plus"></i> Copiar Outro Site
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
