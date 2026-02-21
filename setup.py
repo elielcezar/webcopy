@@ -14,6 +14,8 @@ setup(
         "lxml>=5.0.0",
         "click>=8.1.0",
         "brotli>=1.0.0",
+        "flask>=3.0.0",
+        "flask-cors>=4.0.0",
     ],
     entry_points={
         "console_scripts": [
