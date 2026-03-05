@@ -269,3 +269,9 @@ python3 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt && pip install -e .
 python run_web.py
 ```
+
+## Reiniciar o projeto
+```bash
+source venv/bin/activate
+python run_web.py
+```
